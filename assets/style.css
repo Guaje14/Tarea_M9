@@ -1,0 +1,52 @@
+/* Dropdown de equipo más alto y limpio */
+.dropdown-team-large .Select-control {
+    min-height: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d9dee7;
+    box-shadow: none;
+}
+
+/* Texto del placeholder, valor e input */
+.dropdown-team-large .Select-placeholder,
+.dropdown-team-large .Select-input,
+.dropdown-team-large .Select-value-label {
+    line-height: 54px !important;
+    font-size: 15px;
+}
+
+/* Contenedor del valor seleccionado */
+.dropdown-team-large .Select-value {
+    display: flex;
+    align-items: center;
+    height: 54px;
+    padding-left: 6px;
+}
+
+/* Menú desplegable del dropdown */
+.dropdown-team-large .Select-menu-outer {
+    border-radius: 12px;
+    margin-top: 6px;
+    border: 1px solid #d9dee7;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Opciones internas del desplegable */
+.dropdown-team-large .VirtualizedSelectOption {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    padding: 8px 12px;
+    font-size: 15px;
+}
+
+/* Escudo o icono del equipo */
+.team-option-badge {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-right: 8px;
+    vertical-align: middle;
+}

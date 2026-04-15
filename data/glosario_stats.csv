@@ -1,0 +1,41 @@
+Sigla,Nombre Castellano,Descripción
+Nombre,Nombre,Nombre del jugador
+Equipo,Equipo,Club al que pertenece
+Posición,Posición,"Posición táctica (POR, DFC, MC, DC, etc.)"
+Edad,Edad,Edad biológica del deportista
+PJ,Partidos Jugados,Total de partidos en los que ha participado
+Min,Minutos,Minutos totales disputados
+Gls,Goles,Goles anotados
+As,Asistencias,Pases de gol directos
+PK,Pases Clave,Pases que resultan en un remate de un compañero
+Pas,Pases Intentados,Total de pases realizados
+PasCmp,Pases Completados,Pases que llegaron a su destino
+PasFail,Pases Fallados,Pases interceptados o perdidos
+PasLong,Pases Largos,Pases de más de 25 metros intentados
+PasLongCmp,Pases Largos Completados,Efectividad en desplazamientos largos
+Cen,Centros,Balones colgados al área
+CenCmp,Centros Completados,Centros que encontraron rematador
+xG,Goles Esperados,Calidad de las ocasiones de gol (probabilidad estadística)
+xAG,Asistencias Esperadas,Probabilidad de que sus pases terminen en gol
+Rem,Remates,Tiros totales realizados
+RemP,Remates a Puerta,Tiros que fueron entre los tres palos
+Reg,Regates,Intentos de desborde 1 contra 1
+RegCmp,Regates Éxito,Regates completados con éxito
+Per,Pérdidas,Balones perdidos por error propio o robo
+Conducciones,Conducciones,Acciones de llevar el balón controlado más de 5 metros
+Entradas,Entradas,Intentos de robo de balón yendo al suelo o choque
+Int,Intercepciones,Balones cortados en trayectorias de pase
+Despejes,Despejes,Balones alejados de zona de peligro
+Bloqueos,Bloqueos,Disparos o pases rivales taponados
+DnG,Duelos Ganados,Disputas físicas por el balón ganadas
+DnP,Duelos Perdidos,Disputas físicas por el balón perdidas
+TA,Tarjetas Amarillas,Amonestaciones recibidas
+TR,Tarjetas Rojas,Expulsiones
+FC,Faltas Cometidas,Infracciones realizadas sobre el rival
+FR,Faltas Recibidas,Infracciones sufridas
+Paradas,Paradas,Remates detenidos por el portero
+GR,Goles Recibidos,Goles encajados (solo porteros)
+PaC,Porterías a Cero,Partidos sin recibir gol
+Distancia_km,Distancia Recorrida,Kilómetros totales cubiertos en el campo
+VelMax,Velocidad Máxima,Pico de velocidad alcanzado (km/h)
+Recuperaciones,Recuperaciones,Balones vueltos a poseer tras pérdida rival

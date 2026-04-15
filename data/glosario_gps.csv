@@ -1,0 +1,13 @@
+Sigla,Nombre Castellano,Descripción
+Jugadora,Jugadora,Nombre de la futbolista
+Fecha,Fecha,Día de la toma de datos (formato AAAA-MM-DD)
+TipoSesion,Tipo de Sesión,"E = Entrenamiento, P = Partido"
+Minutos,Minutos Totales,Tiempo total de registro del dispositivo GPS
+DistTotal_m,Distancia Total (m),Volumen total de metros recorridos
+DistAltaVel_m,Distancia Alta Velocidad (m),Metros recorridos a >19.8 km/h (HSR)
+Sprints_n,Número de Sprints,Acciones explosivas a >25.2 km/h
+VelMax_kmh,Velocidad Máxima (km/h),Pico de velocidad más alto registrado
+Acel_Alta_n,Aceleraciones Alta Intensidad,Cambios de ritmo >3 m/s²
+Decel_Alta_n,Deceleraciones Alta Intensidad,Frenazos >-3 m/s²
+CargaMetabolica,Carga Metabólica Total,Índice energético combinado (HMLD)
+DistPorMin,Metros por Minuto,Intensidad relativa (DistTotal_m / Minutos)

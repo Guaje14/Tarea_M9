@@ -1,0 +1,88 @@
+/* Fondo general de la app */
+body {
+  background: linear-gradient(180deg, #f4f7fb 0%, #eef3f9 100%);
+}
+
+/* Texto superior pequeño tipo etiqueta */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .8rem;
+  color: #0d6efd;
+  font-weight: 700;
+  margin-bottom: .6rem;
+}
+
+/* Estilo base de tarjetas y paneles */
+.card-soft, .hero-panel {
+  border: 1px solid #e9eef5;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
+  background: #fff;
+}
+
+/* Fondo especial del panel principal */
+.hero-panel {
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+/* Barra de navegación principal */
+.main-navbar {
+  background: linear-gradient(90deg, #101722 0%, #16263a 100%) !important;
+}
+
+/* Estado activo de los enlaces del menú */
+.navbar .nav-link.active {
+  background: rgba(255,255,255,.18);
+  border-radius: 12px;
+}
+
+/* Ajuste del logo de marca */
+.brand-logo {
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+/* Espaciado de la fila principal */
+.hero-row {
+  padding: 1rem 0 0.5rem 0;
+}
+
+/* Tarjeta pequeña de métricas */
+.metric-pill {
+  min-width: 100px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: #f4f8ff;
+  border: 1px solid #dfe8f6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Número principal de cada métrica */
+.metric-pill span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Texto secundario de cada métrica */
+.metric-pill small {
+  color: #5d6b82;
+}
+
+/* Icono o escudo en opciones de equipo */
+.team-option-badge {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* Hace que el dropdown quede por encima */
+.Select-menu-outer {
+  z-index: 2000;
+}
