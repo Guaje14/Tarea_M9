@@ -113,13 +113,18 @@ def normalize_gps_df(df: pd.DataFrame) -> pd.DataFrame:
 
     # Asegura columnas numéricas obligatorias
     required_numeric = ["DistTotal_m", "DistAltaVel_m", "Sprints", "Acel_Alta", "Decel_Alta", "CargaMetabolica", "DistPorMin", "Minutos"]
+    
     for col in required_numeric:
         if col not in df.columns:
-            df[col] = 0
-        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
+            df[col] = 0.0
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0.0)
+
+    df["Minutos"] = df["Minutos"].astype(float)
 
     # Estima minutos si faltan pero hay distancia y distancia por minuto
     if (df["Minutos"] == 0).all() and "DistPorMin" in df.columns and "DistTotal_m" in df.columns:
+
+        df["Minutos"] = df["Minutos"].astype(float)
 
         df["DistPorMin"] = pd.to_numeric(df["DistPorMin"], errors="coerce")
         df["DistPorMin"] = df["DistPorMin"].replace([np.inf, -np.inf], np.nan)
@@ -128,8 +133,11 @@ def normalize_gps_df(df: pd.DataFrame) -> pd.DataFrame:
         df["DistTotal_m"] = df["DistTotal_m"].replace([np.inf, -np.inf], np.nan)
 
         valid_mask = df["DistPorMin"] > 0
-        df.loc[valid_mask, "Minutos"] = df.loc[valid_mask, "DistTotal_m"] / df.loc[valid_mask, "DistPorMin"]
-        df["Minutos"] = df["Minutos"].fillna(0)
+        df.loc[valid_mask, "Minutos"] = (
+            df.loc[valid_mask, "DistTotal_m"] / df.loc[valid_mask, "DistPorMin"]
+        )
+        df["Minutos"] = df["Minutos"].replace([np.inf, -np.inf], np.nan)
+        df["Minutos"] = df["Minutos"].fillna(0.0)
 
     return df
 
