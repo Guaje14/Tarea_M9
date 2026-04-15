@@ -13,6 +13,9 @@ from typing import Iterable
 # Importa pandas para manejar DataFrames
 import pandas as pd
 
+# Importa numpy para manejo de datos numéricos
+import numpy as np
+
 # Importa rutas y nombres de bases de datos desde config
 from config import DATA_DIR, STATS_DB_CANDIDATES, GPS_DB_CANDIDATES
 
@@ -117,9 +120,16 @@ def normalize_gps_df(df: pd.DataFrame) -> pd.DataFrame:
 
     # Estima minutos si faltan pero hay distancia y distancia por minuto
     if (df["Minutos"] == 0).all() and "DistPorMin" in df.columns and "DistTotal_m" in df.columns:
-        with pd.option_context('mode.use_inf_as_na', True):
-            est = (df["DistTotal_m"] / df["DistPorMin"].replace(0, pd.NA)).fillna(0)
-        df["Minutos"] = est.round(0)
+
+        df["DistPorMin"] = pd.to_numeric(df["DistPorMin"], errors="coerce")
+        df["DistPorMin"] = df["DistPorMin"].replace([np.inf, -np.inf], np.nan)
+
+        df["DistTotal_m"] = pd.to_numeric(df["DistTotal_m"], errors="coerce")
+        df["DistTotal_m"] = df["DistTotal_m"].replace([np.inf, -np.inf], np.nan)
+
+        valid_mask = df["DistPorMin"] > 0
+        df.loc[valid_mask, "Minutos"] = df.loc[valid_mask, "DistTotal_m"] / df.loc[valid_mask, "DistPorMin"]
+        df["Minutos"] = df["Minutos"].fillna(0)
 
     return df
 
